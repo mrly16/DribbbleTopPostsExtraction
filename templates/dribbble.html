@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Top5 shots | Dribbble API</title>
+	<style>
+		body
+		{
+		  font-family: 'Montserrat', sans-serif;
+		  font-weight: 400;
+		  text-align: center;
+		  margin:0;
+		  padding:0;
+		}
+		header
+		{
+		  padding-top: 0px;
+		  margin-top: 0px;
+		  padding-top: 30px;
+		  padding-bottom: 30px;
+		  border-bottom: 1.5px solid grey;
+		}
+		b
+		{
+		  text-align:center;
+		  font-family: "garamond";
+		  font-size: 28px;
+		  white-space: nowrap;
+		}
+
+		/* Navbar */
+		#navbar {
+		    position: absolute;
+		    top: 0px;
+		    left: 0px;
+		    right: 0px;
+		    height: 60px;
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+		    background: #222;
+		    font-family: 'Oswald', sans-serif;
+		    font-size: 18px;
+		    font-weight: 300;
+		}
+
+		#navbar li {
+		    position: relative;
+		    float: right;
+		    line-height: 60px;
+		    background: inherit;
+		    text-align: center;
+		    transition: all .2s;
+		}
+
+		#navbar li a {
+		    position: relative;
+		    display: block;
+		    padding: 0 20px;
+		    line-height: inherit;
+		    color: white;
+		    text-decoration: none;
+		}
+
+
+		#navbar .name{
+		  padding-left: 2vw;
+		  float:left;
+		  color:white;
+		  line-height: 60px;
+		  text-align:center;
+		  font-family: "garamond";
+		  font-size: 28px;
+		  white-space: nowrap;
+		}
+		/* Navbar */
+
+
+		h3{
+		  font-family: "garamond";
+		  font-size: 1.8em;
+		  text-decoration: underline;
+		  padding-left: 3vw;
+		  padding-bottom: 0;
+		  margin-bottom: 0;
+		}
+
+
+		ol 
+		{
+		  padding: 0;
+			display: inline-block;
+		  list-style-type: none;
+		}
+
+
+		a
+		{
+		  color: #E1C4C4;
+		  display: inline-block;
+		  text-decoration: none;
+		}
+		.box li span{
+			font-size: 12px;
+		}
+
+
+		
+		footer{
+		  text-align: center;
+		}
+		.footer{
+		  text-align: center;
+		  padding: 1em 0;
+		  background: #B2B2B2;
+		}
+		.footer p{
+		  color:rgba(255, 255, 255, 0.61);
+		  font-size:1em;
+		  text-align:center;
+		}
+		.footer p a{
+		  color:#fff;
+		}
+		.footer p a:hover{
+		  color:#191C23;
+		}
+		.footer ul {
+		  text-align: center;
+		  margin-bottom: 0.5em;
+		  padding-bottom: 0.5em;
+		}
+		.footer ul li {
+		  display: inline-block;
+		  margin-right: 3em;
+		}
+
+		.footer ul li a{
+		  display:block;
+		}
+
+		/* photo gallery */
+		ul.box{
+			list-style-type: none;
+			display: inline-block;
+			padding:0;
+		}
+		ul.box img{
+			width: 17vw;
+		}
+		ul.box li{
+			display: inline-block;
+			margin:10px;
+		}
+
+		.photo-gallery p{
+			font-family: "Times New Norman";
+			font-size:30px;
+			margin:0;
+			margin-top:20px;
+
+		}
+
+		/* photo gallery */
+
+	</style>
+</head>
+<body>
+	<header>
+    <nav>
+    	<ul id="navbar">
+		    <li class="name">Dribbble API</li>	        	    
+		</ul>
+
+    </nav>
+    </header>
+    <section class="photo-gallery">
+	   <div>
+	    <ul class="box">
+		  <p>User Name:  {{ user_list[0][0] }}</p>
+		  {% for u1_best in u1_best_five %}
+		      <li><a class="lb" href="{{ u1_best[1] }}" data-lightbox="image-1" data-title="Overview1" width="200" frameborder="0">
+		      	<img src="{{ u1_best[1] }}" alt=""/></a><br>
+		      	<span>Title:  {{ u1_best[0] }}</span><br>
+		      	<span>Likes_count:  {{ u1_best[2] }}</span><br>
+		      	<span>Views_count:  {{ u1_best[3] }}</span>
+		      </li>
+		  {% endfor %}
+		  <p>User Name:  {{ user_list[1][0] }}</p>
+		  {% for u2_best in u2_best_five %}
+		      <li><a class="lb" href="{{ u2_best[1] }}" data-lightbox="image-1" data-title="Overview1" width="200" frameborder="0">
+		      	<img src="{{ u2_best[1] }}" alt=""/></a><br>
+		      	<span>Title:  {{ u2_best[0] }}</span><br>
+		      	<span>Likes_count:  {{ u2_best[2] }}</span><br>
+		      	<span>Views_count:  {{ u2_best[3] }}</span>
+		      </li>
+		  {% endfor %}
+		  <p>User Name:  {{ user_list[2][0] }}</p>
+		  {% for u3_best in u3_best_five %}
+		      <li><a class="lb" href="{{ u3_best[1] }}" data-lightbox="image-1" data-title="Overview1" width="200" frameborder="0">
+		      	<img src="{{ u3_best[1] }}" alt=""/></a><br>
+		      	<span>Title:  {{ u3_best[0] }}</span><br>
+		      	<span>Likes_count:  {{ u3_best[2] }}</span><br>
+		      	<span>Views_count:  {{ u3_best[3] }}</span>
+		      </li>
+		  {% endfor %}
+		  <p>User Name:  {{ user_list[3][0] }}</p>
+		  {% for u4_best in u4_best_five %}
+		      <li><a class="lb" href="{{ u4_best[1] }}" data-lightbox="image-1" data-title="Overview1" width="200" frameborder="0">
+		      	<img src="{{ u4_best[1] }}" alt=""/></a><br>
+		      	<span>Title:  {{ u4_best[0] }}</span><br>
+		      	<span>Likes_count:  {{ u4_best[2] }}</span><br>
+		      	<span>Views_count:  {{ u4_best[3] }}</span>
+		      </li>
+		  {% endfor %}
+		  <p>User Name:  {{ user_list[4][0] }}</p>
+		  {% for u5_best in u5_best_five %}
+		      <li><a class="lb" href="{{ u5_best[1] }}" data-lightbox="image-1" data-title="Overview1" width="200" frameborder="0">
+		      	<img src="{{ u5_best[1] }}" alt=""/></a><br>
+		      	<span>Title:  {{ u5_best[0] }}</span><br>
+		      	<span>Likes_count:  {{ u5_best[2] }}</span><br>
+		      	<span>Views_count:  {{ u5_best[3] }}</span>
+		      </li>
+		  {% endfor %}
+
+	    </ul>
+	  </div>
+    </section>
+
+  
+    <footer>
+    	<div class="footer">
+			<p>Copyright© 2016 - Powered by Liangyi Murong</p>
+		</div>
+    </footer>
+
+
+</body>
+</html>
