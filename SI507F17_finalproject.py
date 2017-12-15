@@ -11,8 +11,8 @@ from config import *
 
 
 DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S.%f"
-# user_list = ['WOLF_STEVE', 'outcrowd', 'studioMUTI', 'Tamarashvili', 'DmiT']
-user_list = ['norde', 'Fireart-d', 'paperpillar', 'cuberto', 'netguru']
+user_list = ['WOLF_STEVE', 'outcrowd', 'studioMUTI', 'Tamarashvili', 'DmiT']
+# user_list = ['norde', 'Fireart-d', 'paperpillar', 'cuberto', 'netguru']
 
 
 CLIENT_KEY = secret_data.client_key
