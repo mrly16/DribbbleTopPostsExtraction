@@ -41,8 +41,6 @@ Finally, I used the flask library to visualize my data, so that people can use t
 
 Running the code on the bash, people can open their broswers and go to **localhost:5000/dribbble** to see the page for visualization.
 
-The expected result is provided in **Expected_view1.pdf** and **Expected_view2.pdf**
-
 ![](1.jpg)
 
 ![](2.jpg)
