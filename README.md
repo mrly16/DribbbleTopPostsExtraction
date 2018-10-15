@@ -43,6 +43,6 @@ Running the code on the bash, people can open their broswers and go to **localho
 
 The expected result is provided in **Expected_view1.pdf** and **Expected_view2.pdf**
 
-![](Expected_view1.pdf)
+![](1.jpg)
 
-![](Expected_view2.pdf)
+![](2.jpg)
